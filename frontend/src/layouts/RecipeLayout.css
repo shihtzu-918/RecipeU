@@ -1,0 +1,126 @@
+/* src/layouts/RecipeLayout.css */
+.recipe-layout-container {
+  width: 100%;
+  max-width: 393px;
+  height: 852px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  font-family:
+    "Pretendard",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+/* 오버레이 */
+.recipe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+  z-index: 98;
+}
+
+.recipe-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 헤더 */
+.recipe-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 140px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.recipe-header > * {
+  pointer-events: auto;
+}
+
+/* 마스코트 */
+.recipe-mascot {
+  position: absolute;
+  top: 48px;
+  left: 3px;
+  width: 101px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* 닫기 버튼 */
+.recipe-close {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.recipe-close:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.close-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* 메인 카드 */
+.main-recipe-card {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85); /* opacity 제거하고 rgba로 변경 */
+  border-radius: 32px 32px 0 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 스크롤 가능한 콘텐츠 영역 */
+.main-recipe-card-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 32px 24px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* 스크롤바 숨기기 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.main-recipe-card-content::-webkit-scrollbar {
+  display: none;
+}

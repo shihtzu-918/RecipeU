@@ -1,0 +1,145 @@
+/* ===== 컨테이너 ===== */
+.splash-container {
+  width: 393px;
+  height: 852px;
+  margin: 0 auto;
+  background-color: #fff8f0;
+  background-image: url("/splash-bg.png");
+  background-size: 393px 852px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* ===== RecipeU - 위치 128, 83 ===== */
+.splash-recipeu {
+  position: absolute;
+  top: 83px;
+  font-family: "JejuStoneWall", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ff5b32;
+  margin: 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.splash-title-row {
+  position: absolute;
+  top: 130px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 레시퓨 공통 스타일 - 제주돌담체, 115pt */
+.splash-title-char {
+  font-family: "JejuStoneWall", sans-serif;
+  font-size: 115px;
+  line-height: 1;
+  paint-order: stroke fill;
+  -webkit-text-stroke-width: 4px;
+}
+
+/* 레 - #FF5B32 */
+.splash-title-char--reo {
+  color: rgba(255, 91, 50, 0.5);
+  -webkit-text-stroke-color: #ff5b32;
+}
+
+/* 시 - #BD824E */
+.splash-title-char--si {
+  color: rgba(189, 130, 78, 0.5);
+  -webkit-text-stroke-color: #bd824e;
+}
+
+/* 퓨 - #00AB4D */
+.splash-title-char--peu {
+  color: rgba(0, 171, 77, 0.5);
+  -webkit-text-stroke-color: #00ab4d;
+}
+
+/* ===== 캐릭터 - 위치 -1, 220 / 크기 394x492 ===== */
+.splash-character-img {
+  position: absolute;
+  top: 250px;
+  width: 348px;
+  height: 435px;
+  object-fit: contain;
+}
+
+/* ===== 로그인 없이 사용해보기 - 위치 123, 749 ===== */
+.splash-guest-btn {
+  position: absolute;
+  top: 790px;
+  background: none;
+  border: none;
+  color: #48547b;
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  text-decoration-color: rgba(72, 84, 123, 0.4);
+  text-underline-offset: 4px;
+  white-space: nowrap;
+}
+
+/* ===== 네이버 로그인 버튼 ===== */
+.splash-naver-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 670px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.splash-naver-btn-img {
+  width: 250px;
+  height: auto;
+}
+
+.splash-peu-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 740px; /* 720px → 760px (더 아래로) */
+
+  width: 150px; /* 250px → 200px (더 작게) */
+  height: 42px; /* 50px → 42px (더 작게) */
+
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  border: none;
+  border-radius: 21px; /* 25px → 21px (높이에 맞춤) */
+
+  color: #5d4037;
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px; /* 16px → 14px (더 작게) */
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 12px rgba(255, 152, 0, 0.3); /* 그림자도 약간 작게 */
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+
+  z-index: 10;
+}
+
+.splash-peu-btn:hover {
+  background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+  box-shadow: 0 5px 16px rgba(255, 152, 0, 0.4);
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.splash-peu-btn:active {
+  transform: translateX(-50%) scale(0.95);
+}

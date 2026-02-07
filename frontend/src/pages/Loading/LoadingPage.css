@@ -1,0 +1,182 @@
+/* src/pages/Loading/LoadingPage.css */
+
+.home-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.loading-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.loading-text {
+  position: absolute;
+  top: 73px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.loading-text h2 {
+  font-family: "Pretendard", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.loading-text p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* 글자 통통 튀는 애니메이션 */
+.bounce-char {
+  display: inline-block;
+  animation: bounce-letter 2s ease-in-out infinite;
+}
+
+@keyframes bounce-letter {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-6px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+}
+
+/* --- [수정됨] 폰 프레임 + gif 래퍼 설정 --- */
+.phone-wrapper {
+  position: relative;
+  width: 280px;
+  height: 580px;
+  /* margin-bottom: 80px; */
+  flex-shrink: 0;
+  margin-top: 140px;
+
+  /* 중요: 폰 모양대로 둥글게 깎아서 GIF가 튀어나가지 않게 함 */
+  overflow: hidden;
+  border-radius: 40px;
+
+  /* 그림자 등으로 입체감 추가 (선택사항) */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.phone-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* 프레임이 찌그러지지 않게 영역에 맞춤 */
+  object-fit: cover;
+
+  /* 중요: 프레임이 GIF보다 위에 와야 함 */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.phone-wrapper .loading-gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  /* 중요: GIF가 빈 공간 없이 꽉 차게 늘어남 */
+  object-fit: cover;
+
+  /* 중요: 프레임 뒤에 위치 */
+  z-index: 1;
+}
+/* --------------------------------------- */
+
+/* 하단 팁 섹션 */
+.loading-tips {
+  position: relative;
+  width: min(420px, 90%);
+  margin-top: 28px;
+  padding: 0 20px 20px;
+  z-index: 2;
+}
+
+.tip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  /* background: #fff; */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease-in-out;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tip-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tip-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  white-space: pre-line;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .loading-tips {
+    padding: 16px;
+  }
+
+  .tip-item {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .tip-icon {
+    font-size: 18px;
+  }
+
+  .tip-item p {
+    font-size: 13px;
+  }
+}

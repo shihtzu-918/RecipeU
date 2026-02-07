@@ -1,0 +1,31 @@
+/* src/components/ButtonWhite.css */
+.button-white {
+  width: calc(100% - 48px);
+  max-width: 345px;
+  min-height: 56px;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  color: #333333;
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+}
+
+.button-white:hover:not(:disabled) {
+  border-color: #ff5b32;
+  color: #ff5b32;
+  transform: translateY(-1px);
+}
+
+.button-white:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.button-white:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,72 @@
+src
+├── app
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── router.jsx
+├── components
+│   ├── BottomNav.css
+│   ├── BottomNav.jsx
+│   ├── Button.jsx
+│   ├── ButtonRed.css
+│   ├── ButtonRed.jsx
+│   ├── ButtonWhite.css
+│   ├── ButtonWhite.jsx
+│   ├── Header.jsx
+│   ├── Modal.jsx
+│   ├── RecipeBottomSheet.css
+│   └── RecipeBottomSheet.jsx
+├── features
+│   └── chat
+│       ├── components
+│       │   ├── ChatAvatar.jsx
+│       │   ├── ChatBubble.jsx
+│       │   ├── ChatInput.jsx
+│       │   └── ChatList.jsx
+│       └── hooks
+│           ├── useChatAgent.js
+│           ├── useChatSocket.js
+│           └── useCookingAgent.js
+├── layouts
+│   ├── FixedLayout.jsx
+│   ├── MobileLayout.jsx
+│   ├── RecipeLayout.css
+│   ├── RecipeLayout.jsx
+│   └── ScrollLayout.jsx
+├── pages
+│   ├── Chat
+│   │   ├── ChatPage.css
+│   │   └── ChatPage.jsx
+│   ├── Cook
+│   │   ├── CookCompletePage.jsx
+│   │   ├── CookModeAudioPage.css
+│   │   ├── CookModeAudioPage.jsx
+│   │   ├── CookModePage.css
+│   │   ├── CookModePage.jsx
+│   │   ├── CookStartPage.css
+│   │   └── CookStartPage.jsx
+│   ├── Home
+│   │   ├── HomePage.css
+│   │   └── HomePage.jsx
+│   ├── Loading
+│   │   ├── LoadingPage.css
+│   │   └── LoadingPage.jsx
+│   ├── MyPages
+│   │   ├── MyPage.css
+│   │   └── MyPage.jsx
+│   ├── MyRecipes
+│   │   ├── MyRecipesPage.css
+│   │   ├── MyRecipesPage.jsx
+│   │   ├── RecipeDetailModal.css
+│   │   └── RecipeDetailModal.jsx
+│   ├── NaverCallback
+│   │   └── NaverCallbackPage.jsx
+│   ├── Recipes
+│   │   ├── RecipeResultPage.css
+│   │   └── RecipeResultPage.jsx
+│   └── Splash
+│       ├── SplashPage.css
+│       └── SplashPage.jsx
+└── style
+    └── global.css
+
+18 directories, 51 files

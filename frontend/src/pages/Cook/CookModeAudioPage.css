@@ -1,0 +1,221 @@
+/* CookModeAudioPage.css - CookModePage.css 기반 + 채팅 박스 스타일 */
+
+/* ===== 소요시간 + 마이크 버튼 한 줄 (6:4) ===== */
+.cook-time-record-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* margin-top: 10px; */
+}
+
+.cook-time-section {
+  flex: 6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.cook-record-section {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* ===== 채팅 박스 (CookModeAudioPage 전용) ===== */
+.audio-chat-box {
+  width: 100%;
+  max-width: 365px;
+  min-height: 380px;
+  /* background: #FFFFFF; */
+  border-radius: 12px;
+  margin-top: 3px;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.audio-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+  padding-right: 4px;
+}
+
+/* 스크롤바 숨기기 */
+.audio-chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+.audio-chat-messages {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 캐릭터 헤더 */
+.audio-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.audio-chat-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.audio-chat-name {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #374151;
+}
+
+/* 말풍선 */
+.audio-chat-bubble {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #6b7280;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.08);
+
+  /* 말풍선 안에서 텍스트와 점들이 수직 중앙 정렬되도록 */
+  display: flex;
+  align-items: center;
+}
+
+/* 사용자 말풍선 (오른쪽, 분홍색) */
+.audio-chat-bubble.user {
+  align-self: flex-end;
+  background: rgba(255, 91, 50, 0.2);
+  border-radius: 12px 12px 4px 12px;
+}
+
+/* AI 말풍선 (왼쪽) */
+.audio-chat-bubble.ai {
+  align-self: flex-start;
+  background: #f5f5f5;
+  border-radius: 12px 12px 12px 4px;
+}
+
+/* 시스템 안내 말풍선 (왼쪽) */
+.audio-chat-bubble.system {
+  align-self: flex-start;
+  background: rgba(76, 175, 80, 0.15);
+  border-radius: 12px 12px 12px 4px;
+}
+
+.audio-bubble-content {
+  word-break: keep-all;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== [신규] Thinking Dots (생각 중 애니메이션) ===== */
+.thinking-dots {
+  display: inline-flex;
+  gap: 4px;
+  margin-right: 4px; /* 텍스트와의 간격 */
+}
+
+.thinking-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #aaa; /* 말풍선 색에 맞춰 조금 진하게 */
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.thinking-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.thinking-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* ===== cook-step-box 슬라이드 전환 베이스 ===== */
+.cook-step-box {
+  transition:
+    transform 0.25s ease-in-out,
+    opacity 0.25s ease-in-out;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* ===== 슬라이드 애니메이션 (cook-step-box) ===== */
+.cook-step-box.slide-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.cook-step-box.slide-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.cook-step-box.enter-from-right {
+  animation: enterFromRight 0.3s ease-out forwards;
+}
+
+.cook-step-box.enter-from-left {
+  animation: enterFromLeft 0.3s ease-out forwards;
+}
+
+@keyframes enterFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 에러 메시지 */
+.audio-error-msg {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #c00;
+  text-align: center;
+}
+
+/* 녹음 중일 때 버튼 색상 변경 */
+.cook-record-btn.recording {
+  background: #ff5b32;
+  box-shadow: 0 4px 12px rgba(255, 91, 50, 0.4);
+}

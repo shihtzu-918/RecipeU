@@ -1,0 +1,338 @@
+[
+  {
+    "time": "아침",
+    "temp": "추움",
+    "weather": "맑음",
+    "comment": "찬바람에 정신이 번쩍 드는 아침!\n뜨끈한 소고기 무국으로 속을 데워보세요.",
+    "recommendation": "소고기 무국"
+  },
+  {
+    "time": "아침",
+    "temp": "추움",
+    "weather": "비옴",
+    "comment": "비까지 내려 몸이 으슬으슬하네요.\n따뜻한 꿀물 한 잔으로 하루를 시작할까요?",
+    "recommendation": "꿀물"
+  },
+  {
+    "time": "아침",
+    "temp": "추움",
+    "weather": "눈옴",
+    "comment": "하늘도 흐리고 공기도 차네요.\n모락모락 김 나는 편의점 호빵 어떠세요?",
+    "recommendation": "캔커피"
+  },
+  {
+    "time": "아침",
+    "temp": "추움",
+    "weather": "구름 낌",
+    "comment": "하늘도 흐리고 공기도 차네요.\n모락모락 김 나는 편의점 호빵 어떠세요?",
+    "recommendation": "호빵"
+  },
+  {
+    "time": "아침",
+    "temp": "더움",
+    "weather": "맑음",
+    "comment": "아침부터 햇살이 강렬하네요! \n얼음 가득 넣은 아이스 아메리카노 한 잔 어떠세요?",
+    "recommendation": "아이스 아메리카노"
+  },
+  {
+    "time": "아침",
+    "temp": "더움",
+    "weather": "비옴",
+    "comment": "후덥지근한 빗줄기에 지치지 마세요. \n상큼한 과일 주스로 활기를 충전해 보세요!",
+    "recommendation": "과일 주스"
+  },
+  {
+    "time": "아침",
+    "temp": "더움",
+    "weather": "눈옴",
+    "comment": "습하고 더운 눈이라니 신기하네요. \n시원한 미역 오이냉국으로 아침 어때요?",
+    "recommendation": "미역 오이냉국"
+  },
+  {
+    "time": "아침",
+    "temp": "더움",
+    "weather": "구름 낌",
+    "comment": "구름 때문에 후텁지근하네요. \n깔끔한 아이스 녹차로 상쾌하게 시작하세요!",
+    "recommendation": "아이스 녹차"
+  },
+  {
+    "time": "아침",
+    "temp": "쾌적",
+    "weather": "맑음",
+    "comment": "창밖 햇살이 너무 예쁜 아침입니다. \n가벼운 요거트와 그래놀라로 기분 내보세요!",
+    "recommendation": "요거트와 그래놀라"
+  },
+  {
+    "time": "아침",
+    "temp": "쾌적",
+    "weather": "비옴",
+    "comment": "차분한 빗소리가 듣기 좋네요. \n고소한 드립 커피와 토스트 어떠신가요?",
+    "recommendation": "드립 커피와 토스트"
+  },
+  {
+    "time": "아침",
+    "temp": "쾌적",
+    "weather": "눈옴",
+    "comment": "포근하게 눈이 내려요. \n창밖을 보며 따뜻한 코코아 한 잔 마시는 여유를 즐겨보세요.",
+    "recommendation": "코코아"
+  },
+  {
+    "time": "아침",
+    "temp": "쾌적",
+    "weather": "구름 낌",
+    "comment": "선선해서 걷기 좋은 아침입니다. \n가벼운 샌드위치 하나 들고 출근 어떠세요?",
+    "recommendation": "샌드위치"
+  },
+  {
+    "time": "점심",
+    "temp": "추움",
+    "weather": "맑음",
+    "comment": "맑지만 바람이 꽤 매섭네요. \n오늘 점심은 보글보글 끓는 부대찌개 어떠세요?",
+    "recommendation": "부대찌개"
+  },
+  {
+    "time": "점심",
+    "temp": "추움",
+    "weather": "비옴",
+    "comment": "비바람에 체온이 떨어지기 쉬워요. \n김이 모락모락 나는 칼국수 추천합니다!",
+    "recommendation": "칼국수"
+  },
+  {
+    "time": "점심",
+    "temp": "추움",
+    "weather": "눈옴",
+    "comment": "눈길을 헤치고 오느라 고생하셨어요. \n든든하고 따뜻한 순대국밥 한 그릇 어때요?",
+    "recommendation": "순대국밥"
+  },
+  {
+    "time": "점심",
+    "temp": "추움",
+    "weather": "구름 낌",
+    "comment": "볕이 없어 더 쌀쌀한 점심입니다. \n깊은 국물 맛의 잔치국수가 생각나네요.",
+    "recommendation": "잔치국수"
+  },
+  {
+    "time": "점심",
+    "temp": "더움",
+    "weather": "맑음",
+    "comment": "햇볕이 내리쬐는 뜨거운 정오입니다! \n살얼음 동동 띄운 냉면으로 더위를 날려보세요.",
+    "recommendation": "냉면"
+  },
+  {
+    "time": "점심",
+    "temp": "더움",
+    "weather": "비옴",
+    "comment": "비 때문에 습도가 너무 높죠? \n입맛 돋우는 매콤한 비빔 국수 어떠신가요?",
+    "recommendation": "비빔 국수"
+  },
+  {
+    "time": "점심",
+    "temp": "더움",
+    "weather": "눈옴",
+    "comment": "후터분한 열기에 눈까지 오네요. \n이럴 땐 시원한 에어컨 아래 모밀 소바가 딱이죠!",
+    "recommendation": "모밀 소바"
+  },
+  {
+    "time": "점심",
+    "temp": "더움",
+    "weather": "구름 낌",
+    "comment": "후끈한 열기가 구름에 갇힌 날이에요. \n점심은 가볍고 시원한 포케 어떠세요?",
+    "recommendation": "포케"
+  },
+  {
+    "time": "점심",
+    "temp": "쾌적",
+    "weather": "맑음",
+    "comment": "날씨가 너무 좋아 나가고 싶네요! \n근처 공원에서 도시락 까먹기 딱 좋은 날씨예요.",
+    "recommendation": "도시락"
+  },
+  {
+    "time": "점심",
+    "temp": "쾌적",
+    "weather": "비옴",
+    "comment": "빗소리를 반찬 삼아 점심 드세요. \n기름 냄새 솔솔 나는 돈가스 어떠신가요?",
+    "recommendation": "돈가스"
+  },
+  {
+    "time": "점심",
+    "temp": "쾌적",
+    "weather": "눈옴",
+    "comment": "눈 내리는 창가 자리를 잡아보세요. \n분위기 있게 파스타 한 접시 추천드려요!",
+    "recommendation": "파스타"
+  },
+  {
+    "time": "점심",
+    "temp": "쾌적",
+    "weather": "구름 낌",
+    "comment": "야외활동하기 딱 좋은 선선함이네요. \n오늘 점심은 수제 버거 어떠세요?",
+    "recommendation": "수제 버거"
+  },
+  {
+    "time": "저녁",
+    "temp": "추움",
+    "weather": "맑음",
+    "comment": "별이 빛나는 추운 밤입니다. \n퇴근길에 어묵탕에 사케 한 잔 어떠세요?",
+    "recommendation": "어묵탕과 사케"
+  },
+  {
+    "time": "저녁",
+    "temp": "추움",
+    "weather": "비옴",
+    "comment": "찬 비가 내려 몸이 무겁네요. \n지글지글 소리 내며 굽는 삼겹살로 기운 내세요!",
+    "recommendation": "삼겹살"
+  },
+  {
+    "time": "저녁",
+    "temp": "추움",
+    "weather": "눈옴",
+    "comment": "함박눈이 내리는 낭만적인 밤! \n집에서 따뜻한 전골 요리 어떠신가요?",
+    "recommendation": "전골 요리"
+  },
+  {
+    "time": "저녁",
+    "temp": "추움",
+    "weather": "구름 낌",
+    "comment": "흐린 날씨에 기온까지 뚝 떨어졌네요. \n진한 국물의 감자탕 추천드려요.",
+    "recommendation": "감자탕"
+  },
+  {
+    "time": "저녁",
+    "temp": "더움",
+    "weather": "맑음",
+    "comment": "열대야가 찾아올 것 같은 저녁! \n시원한 치맥으로 하루를 보상받으세요.",
+    "recommendation": "치킨과 맥주"
+  },
+  {
+    "time": "저녁",
+    "temp": "더움",
+    "weather": "비옴",
+    "comment": "비가 와서 더 눅눅한 저녁이네요. \n바삭하게 구운 전과 막걸리 한 잔 어때요?",
+    "recommendation": "전과 막걸리"
+  },
+  {
+    "time": "저녁",
+    "temp": "더움",
+    "weather": "눈옴",
+    "comment": "후끈한 저녁, 눈까지 내려 묘한 날씨네요. \n매콤한 아구찜으로 땀 한번 쫙 빼보세요!",
+    "recommendation": "아구찜"
+  },
+  {
+    "time": "저녁",
+    "temp": "더움",
+    "weather": "구름 낌",
+    "comment": "후덥지근해서 요리하기 힘든 날이죠. \n오늘은 배달로 냉채 족발 어떠신가요?",
+    "recommendation": "냉채 족발"
+  },
+  {
+    "time": "저녁",
+    "temp": "쾌적",
+    "weather": "맑음",
+    "comment": "완벽한 저녁 날씨예요! \n야외 테라스에서 스테이크와 와인 한 잔 어떠세요?",
+    "recommendation": "스테이크와 와인"
+  },
+  {
+    "time": "저녁",
+    "temp": "쾌적",
+    "weather": "비옴",
+    "comment": "차분하게 비 내리는 저녁입니다. \n따뜻한 샤브샤브로 건강한 한 끼 추천해요!",
+    "recommendation": "샤브샤브"
+  },
+  {
+    "time": "저녁",
+    "temp": "쾌적",
+    "weather": "눈옴",
+    "comment": "소복하게 눈이 내려요. \n분위기 있게 피자 시켜서 영화 한 편 보실까요?",
+    "recommendation": "피자"
+  },
+  {
+    "time": "저녁",
+    "temp": "쾌적",
+    "weather": "구름 낌",
+    "comment": "선선한 바람이 불어 기분 좋네요. \n저녁 메뉴로 든든한 갈비찜 어떠세요?",
+    "recommendation": "갈비찜"
+  },
+  {
+    "time": "새벽",
+    "temp": "추움",
+    "weather": "맑음",
+    "comment": "고요하고 차가운 새벽 공기네요. \n따뜻하게 데운 우유 한 잔 마시고 푹 주무세요.",
+    "recommendation": "따뜻한 우유"
+  },
+  {
+    "time": "새벽",
+    "temp": "추움",
+    "weather": "비옴",
+    "comment": "빗소리에 잠을 설칠 것 같은 추운 새벽입니다. \n따뜻한 유자차 한 잔 어떠세요?",
+    "recommendation": "유자차"
+  },
+  {
+    "time": "새벽",
+    "temp": "추움",
+    "weather": "눈옴",
+    "comment": "하얗게 쌓이는 눈을 보며 잠시 생각에 잠겨보세요. \n율무차 한 잔이 잘 어울리겠네요.",
+    "recommendation": "율무차"
+  },
+  {
+    "time": "새벽",
+    "temp": "추움",
+    "weather": "구름 낌",
+    "comment": "안개가 자욱한 쌀쌀한 새벽입니다. \n몸을 녹여줄 생강차 한 잔 추천드려요.",
+    "recommendation": "생강차"
+  },
+  {
+    "time": "새벽",
+    "temp": "더움",
+    "weather": "맑음",
+    "comment": "새벽에도 열기가 가시지 않네요. \n시원한 보리차 한 잔 마시고 다시 누워볼까요?",
+    "recommendation": "보리차"
+  },
+  {
+    "time": "새벽",
+    "temp": "더움",
+    "weather": "비옴",
+    "comment": "빗소리가 시끄러운 후끈한 새벽입니다. \n가볍게 수박 한 조각 드시고 열을 식혀보세요.",
+    "recommendation": "수박"
+  },
+  {
+    "time": "새벽",
+    "temp": "더움",
+    "weather": "눈옴",
+    "comment": "습하고 더운 새벽, 눈까지 내리네요. \n시원한 탄산수 한 잔으로 갈증을 달래보세요.",
+    "recommendation": "탄산수"
+  },
+  {
+    "time": "새벽",
+    "temp": "더움",
+    "weather": "구름 낌",
+    "comment": "답답한 공기에 잠이 안 올 땐, \n차가운 매실차 한 잔이 도움이 될 거예요.",
+    "recommendation": "매실차"
+  },
+  {
+    "time": "새벽",
+    "temp": "쾌적",
+    "weather": "맑음",
+    "comment": "공기가 참 맑고 깨끗한 새벽입니다. \n창문을 열고 허브차 향을 느껴보세요.",
+    "recommendation": "허브차"
+  },
+  {
+    "time": "새벽",
+    "temp": "쾌적",
+    "weather": "비옴",
+    "comment": "톡톡 떨어지는 빗소리가 감성적이네요. \n마음을 차분하게 해줄 캐모마일 티 어떠세요?",
+    "recommendation": "캐모마일 티"
+  },
+  {
+    "time": "새벽",
+    "temp": "쾌적",
+    "weather": "눈옴",
+    "comment": "소리 없이 눈이 쌓이는 평화로운 새벽입니다. \n따뜻한 둥굴레차 한 잔 어떠신가요?",
+    "recommendation": "둥굴레차"
+  },
+  {
+    "time": "새벽",
+    "temp": "쾌적",
+    "weather": "구름 낌",
+    "comment": "선선해서 명상하기 좋은 새벽이네요. \n가벼운 견과류 한 줌 드시며 쉬어보세요.",
+    "recommendation": "견과류"
+  }
+]

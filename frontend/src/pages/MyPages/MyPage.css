@@ -1,0 +1,623 @@
+@font-face {
+    font-family: "EF_jejudoldam";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2") format("woff2");
+}
+
+.mypage-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f7f8f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.mypage-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    padding: 40px 5px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mypage-board {
+    flex: 1;
+    min-height: 0;
+    padding: 0px 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-bottom: 40px;
+    scrollbar-width: none;
+}
+
+.scroll-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* 상단바 */
+.mypage-top-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: -2px;
+}
+
+/* 회원 프로필 카드 */
+.member-profile-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.1);
+    padding: 14px 18px;
+    margin-bottom: 18px;
+}
+
+.member-photo {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff5c35;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.member-nickname {
+    font-size: 16px;
+    font-weight: bold;
+    color: #48547b;
+}
+
+.member-email {
+    font-size: 12px;
+    color: #868e96;
+}
+
+.logout-btn {
+    margin-left: auto;
+    padding: 8px 14px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    background: #ff5c35;
+    color: white;
+    border-color: #ff5c35;
+}
+
+/* 새로운 프로필 행 (박스 없는 인라인 스타일) */
+.member-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.member-photo-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff5c35;
+    flex-shrink: 0;
+}
+
+.member-info-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.member-nickname-inline {
+    font-size: 15px;
+    font-weight: bold;
+    color: #48547b;
+}
+
+.member-email-inline {
+    font-size: 11px;
+    color: #868e96;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.member-name-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.member-birthday-badge {
+    font-size: 11px;
+    color: #ff5c35;
+    font-weight: 600;
+    white-space: nowrap;
+
+    /* 배지 느낌 */
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(255, 92, 53, 0.12);
+}
+
+.birthday-celebration {
+    font-size: 13px;
+    color: #ff5c35;
+    font-weight: 700;
+    margin-top: 2px;
+    animation: celebrate 1s ease-in-out infinite;
+}
+
+@keyframes celebrate {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.logout-btn-inline {
+    padding: 6px 12px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.logout-btn-inline:hover {
+    background: #ff5c35;
+    color: white;
+    border-color: #ff5c35;
+}
+
+/* 인사말 */
+.greeting {
+    width: 100%;
+    font-weight: bold;
+}
+
+.greeting .hello {
+    font-size: 20px;
+    color: #48547b;
+    margin: 0;
+}
+
+.greeting .user-name {
+    font-size: 20px;
+    color: #48547b;
+    margin: 0px 0 20px;
+}
+
+.orange-text {
+    color: #ff5c35;
+    font-size: 24px;
+    font-family: "EF_jejudoldam", sans-serif;
+}
+
+/* 프로필 탭 */
+.profile-selection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 8px;
+    width: 100%;
+}
+
+.profile-tab-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    min-width: max-content;
+    /* 이 줄 추가 */
+}
+
+.tab-group {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex: 1;
+    min-width: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-top: 5px;
+}
+
+.profile-tab {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    min-width: max-content;
+}
+
+.profile-tab.active {
+    background: #ff5c35;
+    color: #fff;
+    border-color: #ff5c35;
+}
+
+.delete-x {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff5c35;
+    color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.profile-name-input {
+    width: 60px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px dashed #ff5c35;
+    outline: none;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.add-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+/* 카드 스타일 */
+.info-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.12);
+    padding: 12px 20px 20px;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 16px;
+    color: #48547b;
+    margin: 0 0 12px !important;
+    border-bottom: 1px solid #d1d3d4;
+    padding-bottom: 8px;
+    font-family: "EF_jejudoldam", sans-serif;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.tag {
+    background: #ebebeb;
+    color: #9fa1a5;
+    padding: 5px 5px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.tag.editable {
+    border: 1px dashed #ff5c35;
+    cursor: pointer;
+}
+
+.tag-remove {
+    margin-left: 4px;
+    color: #ff5c35;
+    font-weight: bold;
+}
+
+.tag-add-box {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 2px 8px;
+}
+
+.tag-add-box input {
+    border: none;
+    background: transparent;
+    width: 50px;
+    font-size: 12px;
+    outline: none;
+}
+
+.tag-add-box button {
+    border: none;
+    background: none;
+    color: #ff5c35;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 수정 버튼 */
+.edit-btn-row {
+    text-align: right;
+    margin-bottom: 0px;
+}
+
+.edit-toggle {
+    padding: 6px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.edit-toggle.active {
+    background: #ff5c35;
+    color: #fff;
+    border-color: #ff5c35;
+}
+
+/* 도구 그리드 */
+.section-title {
+    font-size: 19px;
+    color: #48547b;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #d1d3d4;
+    padding-bottom: 8px;
+    font-family: "EF_jejudoldam", sans-serif;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px 5px;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.tool-box {
+    width: 52px;
+    height: 52px;
+    border: 1.5px solid #eee;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    background: #fff;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.18);
+}
+
+.tool-box.selected {
+    border: 2.5px solid #54a0ff;
+    background: #f0f7ff;
+}
+
+.tool-label {
+    font-size: 11px;
+    color: #a0a2a7;
+    text-align: center;
+}
+
+/* 모달 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    width: 280px;
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.modal-text {
+    font-size: 16px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.modal-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.modal-btn.cancel {
+    background: #f1f3f5;
+    color: #868e96;
+}
+
+.modal-btn.confirm {
+    background: #ff5c35;
+    color: #fff;
+}
+
+.tool-icon-img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.nav-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.add_user-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.home-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-top: 4px;
+}
+
+/* 저장 실패 알림 토스트 */
+.save-error-toast {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff4444;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 8px;
+}
+
+/* 게스트 로그인 안내 */
+.guest-login-prompt {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.1);
+    padding: 28px 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.guest-login-prompt p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+.guest-login-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: #ff5c35;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.guest-login-btn:hover {
+    background: #e04e2a;
+}
+
+.add-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.add-btn:disabled img {
+  opacity: 0.5;
+}

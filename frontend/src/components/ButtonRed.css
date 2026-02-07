@@ -1,0 +1,49 @@
+/* src/components/ButtonRed.css */
+.button-red {
+  width: calc(100% - 0px);
+  max-width: 345px;
+  min-height: 56px;
+  background-color: #ff5b32;
+  border: none;
+  border-radius: 16px;
+  color: #ffffff;
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 91, 50, 0.3);
+}
+
+.button-red:hover:not(:disabled) {
+  background-color: #e04a24;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 91, 50, 0.4);
+}
+
+.button-red:active:not(:disabled) {
+  background-color: #d04520;
+  transform: translateY(0);
+}
+
+.button-red:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-red-main {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button-red-sub {
+  font-size: 12px;
+  opacity: 0.9;
+  font-weight: 400;
+}

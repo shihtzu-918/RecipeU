@@ -1,0 +1,379 @@
+/* ===============================
+   전체 화면: 절대 스크롤 X
+================================ */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 🔥 화면 자체 스크롤 금지 */
+}
+
+/* ===============================
+   배경
+================================ */
+.home-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* ===============================
+   🌤 날씨
+================================ */
+/* ===============================
+   🌤 날씨
+================================ */
+.weather-box {
+  position: absolute;
+  left: 14px;
+  top: 68px;
+
+  width: auto; /* 고정 넓이 제거 */
+  min-width: 108px; /* 최소 넓이 */
+  max-width: 250px; /* 최대 넓이 (선택사항) */
+  height: 30px;
+
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px; /* 좌우 여유 증가 */
+
+  z-index: 3;
+}
+
+.weather-box img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0; /* 이미지 크기 고정 */
+}
+
+.weather-box span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4a5a8a;
+  white-space: nowrap; /* 텍스트 한 줄 유지 */
+}
+
+/* 온도 */
+.weather-temp {
+  font-weight: 600; /* 온도 강조 */
+}
+
+/* 날씨 설명 */
+.weather-desc {
+  font-weight: 400;
+}
+/* ===============================
+   🥔 프로필 아이콘
+================================ */
+.profile-icon {
+  position: absolute;
+  left: 343px;
+  top: 68px;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  z-index: 3;
+
+  transition: all 0.3s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 클릭 효과 */
+.profile-icon:active {
+  transform: scale(0.95);
+}
+
+/* ===============================
+   💬 말풍선
+================================ */
+.speech-bubble {
+  position: absolute;
+  left: 14px;
+  top: 118px;
+
+  width: 365px;
+
+  background: rgba(255, 255, 255, 0.75);
+  padding: 18px 0px;
+  border-radius: 18px;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  color: #4a5a8a;
+
+  z-index: 3;
+}
+
+/* ===============================
+   🥔 메인 캐릭터
+================================ */
+.main-character {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 290px;
+
+  z-index: 2;
+  animation: breathing 2.5s ease-in-out infinite;
+}
+
+/* ===============================
+   🔥 내부 스크롤 영역
+================================ */
+.home-scroll {
+  position: absolute;
+  top: 420px;
+  left: 16px;
+  right: 16px;
+  bottom: 80px; /* BottomNav 영역 */
+  padding-top: 10px;
+
+  overflow-y: auto;
+  z-index: 2;
+
+  /* 스크롤바 숨김 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.home-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   🧾 카드 공통
+================================ */
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  padding: 11px 20px 11px 56px;
+  margin-bottom: 13px;
+  min-height: 50px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(74, 90, 138, 0.15);
+}
+
+.card:active {
+  transform: translateY(-2px);
+}
+
+/* 메인 카드 */
+.card-large {
+  display: flex;
+  align-items: center;
+}
+
+/* 카드 아이콘 */
+.card-icon {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ===============================
+   🧾 카드 텍스트 (요구사항 반영)
+================================ */
+.card-text h3,
+.card h3 {
+  margin: 0;
+  font-size: 17px; /* ✅ 17px */
+  font-weight: 700; /* ✅ Bold */
+  color: #4a5a8a;
+}
+
+.card-h3 {
+  padding-top: 6px;
+}
+
+.card-text p,
+.card p {
+  margin-top: 2px;
+  margin-bottom: 0px;
+  font-size: 13px; /* ✅ 13px */
+  font-weight: 400;
+  color: #5f6c8f;
+  line-height: 1.4;
+}
+
+/* 이동 버튼 */
+.card-action {
+  margin-left: auto;
+  width: 80px;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+/* ===============================
+   하단 2개 카드
+================================ */
+.card-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* 하단 카드 전용 */
+.card.small {
+  width: 170px;
+  padding: 15px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card.small:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(74, 90, 138, 0.2);
+}
+
+.card.small:active {
+  transform: translateY(-3px) scale(1);
+}
+
+/* 상단 아이콘 영역 */
+.card-small-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* small 카드에서는 아이콘 absolute ❌ */
+.card.small .card-icon {
+  position: static;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.card.small:hover .card-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.card:hover .highlight {
+  color: #ff5532;
+  transform: scale(1.05);
+  display: inline-block;
+}
+
+/* 강조 텍스트 */
+.highlight {
+  font-size: 21px;
+  color: #ff6a4d;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.mypage-box {
+  position: absolute;
+  right: 18px;
+  top: 34px;
+
+  width: auto;
+  min-width: 60px;
+  height: 30px;
+
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  border-bottom-right-radius: 4px; /* 오른쪽 아래 뽀족 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+
+  z-index: 3;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mypage-desc {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5a8a;
+  white-space: nowrap;
+}
+/* ===============================
+   🫁 캐릭터 애니메이션
+================================ */
+@keyframes breathing {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.04);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+/* ===============================
+   🧾 리포트 카드 (주황 포인트)
+================================ */
+.card-report {
+  background: rgb(255 174 134 / 90%);
+  border: 1.5px solid rgba(255, 170, 120, 0.6);
+}
+
+.card-report h3 {
+  color: #4a5a8a;
+}
+
+.card-report p {
+  color: #4a5a8a;
+}
+
+/* 아이콘 강조 */
+.card-report .card-icon {
+  filter: drop-shadow(0 2px 4px rgba(255, 106, 77, 0.35));
+}
+
+/* hover 시 리포트 강조 */
+.card-report:hover {
+  background: rgba(255, 235, 225, 0.95);
+  box-shadow: 0 10px 20px rgba(255, 120, 80, 0.25);
+  transform: translateY(-5px);
+}
+
+/* hover 시 텍스트 더 강조 */
+.card-report:hover h3 {
+  color: #ff5532;
+}

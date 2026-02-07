@@ -1,0 +1,29 @@
+
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.db
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build
+dist/
+build/
+
+# .env
+.env
+.env.*
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+nul

@@ -1,0 +1,78 @@
+/* ===== 컨테이너 ===== */
+.cook-start-container {
+  width: 393px;
+  height: 852px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 배경 */
+.cook-start-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #be8150;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== 상단 텍스트 ===== */
+.cook-start-content {
+  position: absolute;
+  top: 100px;
+  left: 24px;
+  right: 24px;
+  z-index: 1;
+}
+
+.cook-start-title {
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0 0 16px 0;
+}
+
+.cook-start-desc {
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+/* ===== 캐릭터 ===== */
+.cook-start-character-section {
+  position: absolute;
+  top: 260px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.cook-start-character-img {
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ===== 버튼 wrapper ===== */
+.cook-start-btn-wrapper {
+  position: absolute;
+  bottom: 100px;
+  left: 24px;
+  right: 24px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}

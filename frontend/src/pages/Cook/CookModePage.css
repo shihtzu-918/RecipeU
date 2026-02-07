@@ -1,0 +1,204 @@
+/* CookModePage.css - 내부 컴포넌트 스타일만 */
+
+/* 헤더 행: 제목+소요시간 (6) | 녹음 버튼 (4) */
+.cook-header-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.cook-header-info {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* 레시피 제목 */
+.cook-recipe-title {
+  font-family: "JejuStoneWall", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #FF5B32;
+  margin: 0;
+  text-align: left;
+}
+
+.cook-time-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.cook-record-section {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cook-time-text {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #48547B;
+}
+
+
+/* 단계 설명 박스 */
+.cook-step-box {
+  width: 100%;
+  max-width: 365px;
+  min-height: 78px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  margin-top: 24px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.cook-step-label {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #FF5B32;
+  margin-bottom: 7px;
+}
+
+.cook-step-description {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #48547B;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* 슬라이드 애니메이션 (cook-step-box에만 적용) */
+.cook-step-box.slide-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.cook-step-box.slide-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.cook-step-box.enter-from-right {
+  animation: enterFromRight 0.3s ease-out forwards;
+}
+
+.cook-step-box.enter-from-left {
+  animation: enterFromLeft 0.3s ease-out forwards;
+}
+
+@keyframes enterFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 이미지 + 화살표 네비게이션 */
+.cook-image-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  gap: 12px;
+}
+
+.cook-nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.cook-nav-btn:disabled {
+  opacity: 0.3;
+}
+
+.cook-arrow {
+  font-size: 52px;
+  color: #646667;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.cook-food-image-wrapper {
+  width: 50vw;
+  max-width: 290px;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.cook-food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 녹음 버튼 */
+.cook-record-btn {
+  width: 55px;
+  height: 55px;
+  background: #646667;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 음성 모드 안내 힌트 */
+.cook-voice-hint {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #c00;
+  text-align: center;
+}
+
+/* 마지막 단계 종료 버튼 */
+.cook-finish-wrapper {
+  margin-top: 27px;
+  display: flex;
+  justify-content: center;
+  width: 72%;
+}

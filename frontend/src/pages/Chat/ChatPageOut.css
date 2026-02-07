@@ -1,0 +1,248 @@
+/* ChatPageOut.css - 외부 챗봇 전용 */
+
+/* ===== 전체 컨테이너 ===== */
+.external-chat-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 852px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* ===== 헤더 ===== */
+.external-chat-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding: 18px 20px 17px 35px;
+  justify-content: center;
+  background: white;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.external-chat-header h1 {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  margin: 0;
+}
+
+/* ===== 뒤로가기 버튼 ===== */
+.external-back-button {
+  position: absolute;
+  top: 41px;
+  left: 20px;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.external-back-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.back-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ===== 메시지 영역 ===== */
+.external-chat-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  min-height: 0;
+
+  /* 스크롤바 숨김 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.external-chat-content::-webkit-scrollbar {
+  display: none;
+}
+
+.external-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== 메시지 ===== */
+.external-message {
+  display: flex;
+}
+
+.external-message.user {
+  justify-content: flex-end;
+}
+
+.external-message.assistant {
+  justify-content: flex-start;
+}
+
+.external-bubble {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.external-message.user .external-bubble {
+  background: #4caf50;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.external-message.assistant .external-bubble {
+  background: white;
+  color: #374151;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== 생각 중 ===== */
+.external-bubble.external-thinking {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #999;
+  font-size: 16px;
+}
+
+.external-thinking-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.external-thinking-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ccc;
+  animation: external-bounce 1.4s infinite ease-in-out;
+}
+
+.external-thinking-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.external-thinking-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes external-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* ===== 입력창 ===== */
+.external-input-area {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end; /* 하단 정렬 */
+  gap: 8px;
+  padding: 10px 16px 20px;
+  background: white;
+}
+
+.external-input-area textarea {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1.5px solid #eee;
+  border-radius: 15px;
+  font-size: 16px;
+  color: #374151;
+  outline: none;
+  background: #f9f9f9;
+  transition: all 0.15s;
+  resize: none;
+  min-height: 48px;
+  max-height: 72px; /* 최대 높이 제한 */
+  overflow-y: auto;
+  line-height: 1.5;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.external-input-area textarea:focus {
+  border-color: #4caf50;
+  background: #fff;
+}
+
+.external-input-area textarea::placeholder {
+  color: #aaa;
+}
+
+.external-input-area textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 스크롤바 숨기기 */
+.external-input-area textarea::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.external-input-area button {
+  padding: 12px 22px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  height: fit-content; /* auto 대신 fit-content */
+  align-self: flex-end; /* 하단 정렬 */
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.external-input-area button:not(:disabled):hover {
+  background: #45a049;
+}
+
+.external-input-area button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* 볼드 텍스트 스타일 */
+.external-bubble strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* 사용자 메시지의 볼드는 흰색 유지 */
+.external-message.user .external-bubble strong {
+  color: white;
+}
